@@ -40,5 +40,6 @@ If you want to revert everything, do the following:
 
 # Credits
 
-@frostworx - glorious Steam Tinker Launch creator
-@TheEvilSkeleton - initial creation of the flatpak files for the project
+[@frostworx](https://github.com/frostworx) - glorious Steam Tinker Launch creator
+
+[@TheEvilSkeleton](https://github.com/TheEvilSkeleton) - initial creation of the flatpak files for the project
