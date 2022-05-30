@@ -18,7 +18,7 @@ Currently all Steam Tinker Launch flatpak discussion is happening here: https://
 
 4. This bit is a bit scary... currently (30th May, 2022) we're waiting on a feature to make it upstream which is necessary to test this properly, so I've bundled that runtime in `flatpak/com.valvesoftware.Steam.flatpak`. Anything could technically be in this runtime, this is scary! You should never trust random files from the internet!! However, if you want to continue navigate in to the folder and run `flatpak --user com.valvesoftware.Steam.flatpak`
 
-5. If you run `flatpak list` you should see Steam from a test branch, and `steam-origin` Origin. You can run it with `flatpak run --branch=test --arch=x86_64 --command=/app/bin/steam-wrapper --file-forwarding com.valvesoftware.Steam @@u %U @@`
+5. If you run `flatpak list` you should see Steam from a test branch, and `steam-origin` Origin.
 
 6. Navigate back out of the `flatpak` folder, and run `chmod +x fp-build.sh`. This is a file that just automates some of the fiddly flatpak-builder bits. Feel free to check the file first.
 
@@ -26,7 +26,7 @@ Currently all Steam Tinker Launch flatpak discussion is happening here: https://
 
 8. Run `flatpak list --user | grep steamtinkerlaunch` to double check that it is installed.
 
-9. Open the Steam Flatpak. You can run it from the application menu or by running `flatpak run com.valvesoftware.Steam` in the terminal.
+9. Open the Steam Flatpak. You can run it from the application menu or by running ``flatpak run --branch=test --arch=x86_64 --command=/app/bin/steam-wrapper --file-forwarding com.valvesoftware.Steam` in the terminal.
 
 10. Right click the game you want to test, then click "Properties", select "Compatibilty", and check "Force the use of a specific compatibility tool" and select "Steam Tinker Launch" from the dropdown.
 
