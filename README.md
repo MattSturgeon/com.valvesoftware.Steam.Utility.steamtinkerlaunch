@@ -37,3 +37,8 @@ If you want to revert everything, do the following:
 2. Click "Properties" on any game you enabled Steam Tinker Launch for, select "Compatibilty", and uncheck "Force the use of a specific compatibility tool".
 
 3. Run `flatpak remote-delete --user flathub`. This will remove the Flathub remote from the user.
+
+# Credits
+
+@frostworx - glorious Steam Tinker Launch creator
+@TheEvilSkeleton - initial creation of the flatpak files for the project
