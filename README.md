@@ -26,7 +26,7 @@ Currently all Steam Tinker Launch flatpak discussion is happening here: https://
 
 8. Run `flatpak list --user | grep steamtinkerlaunch` to double check that it is installed.
 
-9. Open the Steam Flatpak. You can run it from the application menu or by running ``flatpak run --branch=test --arch=x86_64 --command=/app/bin/steam-wrapper --file-forwarding com.valvesoftware.Steam` in the terminal.
+9. Open the Steam Flatpak. You can run it from the application menu or by running `flatpak run --branch=test --arch=x86_64 --command=/app/bin/steam-wrapper --file-forwarding com.valvesoftware.Steam` in the terminal.
 
 10. Right click the game you want to test, then click "Properties", select "Compatibilty", and check "Force the use of a specific compatibility tool" and select "Steam Tinker Launch" from the dropdown.
 
