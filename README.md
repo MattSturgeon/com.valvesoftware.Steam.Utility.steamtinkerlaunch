@@ -14,25 +14,29 @@ Currently all Steam Tinker Launch flatpak discussion is happening here: https://
 
 2. Open the terminal.
 
-3. Run `git clone https://github.com/HanPrower/com.valvesoftware.Steam.Utility.steamtinkerlaunch` in the terminal.
+3. Run `git clone https://github.com/HanPrower/com.valvesoftware.Steam.Utility.steamtinkerlaunch` in the terminal and navigate in to the directory.
 
-4. Run `chmod +x fp-build.sh`. This is a file that just automates some of the fiddle flatpak-builder bits. Feel free to check the file first.
+4. This bit is a bit scary... currently (30th May, 2022) we're waiting on a feature to make it upstream which is necessary to test this properly, so I've bundled that runtime in `flatpak/com.valvesoftware.Steam.flatpak`. Anything could technically be in this runtime, this is scary! You should never trust random files from the internet!! However, if you want to continue navigate in to the folder and run `flatpak --user com.valvesoftware.Steam.flatpak`
 
-5. Run `./fp-build.sh com.valvesoftware.Steam.Utility.steamtinkerlaunch.yml`. You can safely ignore the Appstream check error. If the utility fails to install, you likely don't have Flathub added for your user specifically. Run `flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo` if that is the case.
+5. If you run `flatpak list` you should see Steam from a test branch, and `steam-origin` Origin. You can run it with `flatpak run --branch=test --arch=x86_64 --command=/app/bin/steam-wrapper --file-forwarding com.valvesoftware.Steam @@u %U @@`
 
-6. Run `flatpak list --user | grep steamtinkerlaunch` to double check that it is installed.
+6. Navigate back out of the `flatpak` folder, and run `chmod +x fp-build.sh`. This is a file that just automates some of the fiddly flatpak-builder bits. Feel free to check the file first.
 
-7. Open the Steam Flatpak. You can run it from the application menu or by running `flatpak run com.valvesoftware.Steam` in the terminal.
+7. Run `./fp-build.sh com.valvesoftware.Steam.Utility.steamtinkerlaunch.yml`. You can safely ignore the Appstream check error. If the utility fails to install, you likely don't have Flathub added for your user specifically. Run `flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo` if that is the case.
 
-8. Right click the game you want to test, then click "Properties". Afterwards select "Compatibilty" and check "Force the use of a specific compatibility tool" and select "Steam Tinker Launch".
+8. Run `flatpak list --user | grep steamtinkerlaunch` to double check that it is installed.
 
-9. Launch the game and you should see the steamtinkerlaunch menu. Press "MAIN MENU" to look at the menu.
+9. Open the Steam Flatpak. You can run it from the application menu or by running `flatpak run com.valvesoftware.Steam` in the terminal.
+
+10. Right click the game you want to test, then click "Properties", select "Compatibilty", and check "Force the use of a specific compatibility tool" and select "Steam Tinker Launch" from the dropdown.
+
+11. Launch the game and you should see the steamtinkerlaunch menu. Press "MAIN MENU" to look at the menu.
 
 # Sick of testing it?
 
 If you want to revert everything, do the following:
 
-1. Run `flatpak remove com.valvesoftware.Steam.Utility.steamtinkerlaunch`.
+1. Run `flatpak remove com.valvesoftware.Steam` and select the version from the `test` location.
 
 2. Click "Properties" on any game you enabled Steam Tinker Launch for, select "Compatibilty", and uncheck "Force the use of a specific compatibility tool".
 

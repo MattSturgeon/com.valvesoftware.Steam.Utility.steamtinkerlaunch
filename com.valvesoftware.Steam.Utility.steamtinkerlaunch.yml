@@ -1,8 +1,8 @@
 id: com.valvesoftware.Steam.Utility.steamtinkerlaunch
-default-branch: stable
+default-branch: test
 sdk: org.freedesktop.Sdk//21.08
 runtime: com.valvesoftware.Steam
-runtime-version: stable
+runtime-version: test
 build-extension: true
 appstream-compose: false
 separate-locales: false
