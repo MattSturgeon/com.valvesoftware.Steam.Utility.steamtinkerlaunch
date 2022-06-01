@@ -119,7 +119,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/frostworx/steamtinkerlaunch/
-        commit: 3599eacc4c918837f8bb067d4c515c45a5d9b334 #v10.0.20220531
+        commit: d16b76c45fe77f0b64b19b041be08becd1ae45ee #v10.0.20220601
       #- type: archive
       #  url: https://github.com/frostworx/steamtinkerlaunch/archive/v10.0.tar.gz
       #  sha256: 9337bf239a00c7fe1ccc53b33311391f8bb47b1865d8bbff8b964ade557537b4
