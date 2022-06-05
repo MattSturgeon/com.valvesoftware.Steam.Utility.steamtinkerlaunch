@@ -16,7 +16,7 @@ Currently all Steam Tinker Launch flatpak discussion is happening here: https://
 
 3. Run `git clone https://github.com/HanPrower/com.valvesoftware.Steam.Utility.steamtinkerlaunch` in the terminal and navigate in to the directory.
 
-4. This bit is a bit scary... currently (30th May, 2022) we're waiting on a feature to make it upstream which is necessary to test this properly, so I've bundled that runtime in `flatpak/com.valvesoftware.Steam.flatpak`. Anything could technically be in this runtime, this is scary! You should never trust random files from the internet!! However, if you want to continue navigate in to the folder and run `flatpak --user com.valvesoftware.Steam.flatpak`
+4. This bit is a bit scary... currently (30th May, 2022) we're waiting on a feature to make it upstream which is necessary to test this properly, so I've bundled that runtime in `flatpak/com.valvesoftware.Steam.flatpak`. Anything could technically be in this runtime, this is scary! You should never trust random files from the internet!! However, if you want to continue navigate in to the folder and run `flatpak install --user com.valvesoftware.Steam.flatpak`
 
 5. If you run `flatpak list` you should see Steam from a test branch, and `steam-origin` Origin.
 
